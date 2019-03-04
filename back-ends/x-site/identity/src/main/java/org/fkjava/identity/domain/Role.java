@@ -62,4 +62,45 @@ public class Role implements Serializable {
             return other.roleKey == null;
         } else return roleKey.equals(other.roleKey);
     }
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getRoleKey() {
+		return roleKey;
+	}
+
+	public void setRoleKey(String roleKey) {
+		this.roleKey = roleKey;
+	}
+
+	public boolean isFixed() {
+		return fixed;
+	}
+
+	public void setFixed(boolean fixed) {
+		this.fixed = fixed;
+	}
+
+	@Override
+	public String toString() {
+		return "Role [id=" + id + ", name=" + name + ", roleKey=" + roleKey + ", fixed=" + fixed + "]";
+	}
+
+	
+
+
 }

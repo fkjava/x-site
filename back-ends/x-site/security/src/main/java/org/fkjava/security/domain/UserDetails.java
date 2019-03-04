@@ -40,4 +40,27 @@ public class UserDetails extends org.springframework.security.core.userdetails.U
         this.userId = user.getId();
         this.name = user.getName();
     }
+
+
+	public String getUserId() {
+		return userId;
+	}
+
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
 }
