@@ -14,7 +14,7 @@
         <module>security</module>
         <module>security-oauth</module>
         <module>security-form</module>
-        <module>security-rest</module>
+        <module>cms</module>
     </modules>
     <packaging>pom</packaging>
 

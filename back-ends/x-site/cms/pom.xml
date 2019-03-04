@@ -10,11 +10,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>security-rest</artifactId>
+    <artifactId>cms</artifactId>
+
     <dependencies>
         <dependency>
             <groupId>org.fkjava</groupId>
-            <artifactId>security</artifactId>
+            <artifactId>security-oauth</artifactId>
             <version>${project.version}</version>
         </dependency>
         <!-- 开发的时候使用的，用于自动部署、自动重启，修改的文件可以马上生效 -->

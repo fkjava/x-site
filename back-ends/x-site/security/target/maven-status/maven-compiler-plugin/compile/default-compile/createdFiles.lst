@@ -1,0 +1,4 @@
+org/fkjava/security/service/SecurityService.class
+org/fkjava/security/service/impl/SecurityServiceImpl.class
+org/fkjava/security/domain/UserDetails.class
+org/fkjava/security/interceptors/UserHolderInterceptor.class

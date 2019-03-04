@@ -1,0 +1,8 @@
+org/fkjava/common/data/utils/ByteUtils.class
+org/fkjava/common/data/domain/Result.class
+org/fkjava/common/data/converters/DateTimePropertyEditor.class
+org/fkjava/common/data/utils/Checksum$Builder.class
+org/fkjava/common/data/converters/DateTimeToStringConverter.class
+org/fkjava/common/data/utils/MD5Utils.class
+org/fkjava/common/data/utils/Checksum.class
+org/fkjava/common/data/utils/SHA.class
