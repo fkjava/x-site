@@ -1,8 +1,9 @@
-package org.fkjava.security.form;
+package org.fkjava.security.sms;
 
 import org.fkjava.security.interceptors.UserHolderInterceptor;
 import org.fkjava.security.service.SecurityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -17,7 +18,6 @@ import org.springframework.security.web.authentication.RememberMeServices;
 import org.springframework.security.web.authentication.rememberme.TokenBasedRememberMeServices;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
@@ -31,7 +31,7 @@ public class FormSecurityConfig extends WebSecurityConfigurerAdapter implements 
 
 
     @Autowired
-    public FormSecurityConfig(SecurityService securityService, PasswordEncoder passwordEncoder) {
+    public FormSecurityConfig(@Autowired @Qualifier("securityService") SecurityService securityService, PasswordEncoder passwordEncoder) {
         this.securityService = securityService;
         this.passwordEncoder = passwordEncoder;
     }

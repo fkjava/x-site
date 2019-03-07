@@ -1,17 +1,30 @@
-package org.fkjava.security.sms;
+package org.fkjava.sms;
 
-import org.fkjava.identity.IdentityConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
+import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 @SpringBootApplication
 @ComponentScan("org.fkjava")
-@EnableJpaRepositories() // 激活JPA的自动DAO扫描
 @EnableRedisRepositories("org.fkjava")
 public class SMSConfig {
+
+    @Bean
+    public RedisTemplate<String, Object> serialRedisTemplate(@Autowired RedisConnectionFactory connectionFactory){
+        RedisTemplate<String, Object> template = new RedisTemplate<>();
+        template.setKeySerializer(new StringRedisSerializer());
+        template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+        template.setConnectionFactory(connectionFactory);
+        return  template;
+    }
 
 
     public static void main(String[] args) {

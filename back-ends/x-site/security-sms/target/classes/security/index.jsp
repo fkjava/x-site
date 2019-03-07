@@ -9,12 +9,7 @@
 </head>
 <body>
 	<div class="col-sm-12 col-md-6 col-md-offset-3 text-center">
-		<form method="post" action="<c:url value="/security/sms/do-logout"/>">
-			<input type="hidden"
-				   name="${_csrf.parameterName}"
-				   value="${_csrf.token}"/>
-			<button>退出登录</button>
-		</form>
+		<%-- 后面可以在这里写一些其他的内容，或者换一个其他的模块来实现首页 --%>
 	</div>
 </body>
 </html>

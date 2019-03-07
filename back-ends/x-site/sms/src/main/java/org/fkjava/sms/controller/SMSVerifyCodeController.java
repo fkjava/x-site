@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 
 @RestController
-@RequestMapping("/security/sms/code")
-public class SMSLoginController {
+@RequestMapping("/sms/verify")
+public class SMSVerifyCodeController {
 
 
     @Autowired
