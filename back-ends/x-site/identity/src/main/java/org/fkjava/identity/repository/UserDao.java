@@ -17,4 +17,6 @@ public interface UserDao extends JpaRepository<User, String> {
 	// 会自动把查询条件前后使用%包起来，使用like查询
 	// where name like ?1
 	Page<User> findByNameContaining(String keyword, Pageable pageable);
+
+	User findByPhone(String phone);
 }

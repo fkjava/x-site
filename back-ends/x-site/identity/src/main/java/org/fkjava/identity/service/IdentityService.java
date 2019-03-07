@@ -21,6 +21,8 @@ public interface IdentityService {
 
 	Optional<User> findByLoginName(String loginName);
 
+	public Optional<User> findByPhone(String phone);
+
 	List<User> findUsers(String keyword);
 
 }

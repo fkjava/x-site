@@ -41,6 +41,8 @@ public class User implements Serializable {
 	private String name;
 	@Column(unique = true, length = 20)
 	private String loginName;
+	@Column(unique = true, length = 20)
+	private String phone;
 	// 密码的长度要多一些，因为后面密码要加密，密文会比较长
 	@Column(length = 255)
 	private String password;
@@ -60,6 +62,14 @@ public class User implements Serializable {
 	// 默认存储索引(ORDINAL)
 	@Enumerated(EnumType.STRING)
 	private Status status;
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 
 	// 用户状态
 	public enum Status {

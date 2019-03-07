@@ -1,12 +1,6 @@
 package org.fkjava.identity.service.impl;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 import org.fkjava.common.data.domain.Result;
 import org.fkjava.identity.domain.Role;
@@ -189,7 +183,26 @@ public class IdentityServiceImpl implements IdentityService {
     public Optional<User> findByLoginName(String loginName) {
         User user = this.userDao.findByLoginName(loginName);
         // 把查询到的User转换为Optional
-        return Optional.ofNullable(user);
+        Optional<User> optional = Optional.ofNullable(user);
+        return optional;
+    }
+
+    @Override
+    public Optional<User> findByPhone(String phone) {
+        User user = this.userDao.findByPhone(phone);
+        // 把查询到的User转换为Optional
+        Optional<User> optional = Optional.ofNullable(user);
+        return optional.or(() -> {
+            // 如果用户不存在，则直接创建一个新的用户！
+            User newUser = new User();
+            newUser.setStatus(Status.NORMAL);
+            newUser.setName(phone);
+            newUser.setPhone(phone);
+            newUser.setLoginName(phone);
+            newUser.setPassword(UUID.randomUUID().toString());
+            this.save(newUser);
+            return Optional.of(newUser);
+        });
     }
 
     @Override

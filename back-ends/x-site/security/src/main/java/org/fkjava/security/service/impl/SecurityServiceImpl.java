@@ -15,7 +15,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 // Spring Security发现内存中有实现了SecurityService的实例，就不会自动创建
-@Service
+@Service("securityService")
 public class SecurityServiceImpl implements SecurityService {
 
     private final IdentityService identityService;
