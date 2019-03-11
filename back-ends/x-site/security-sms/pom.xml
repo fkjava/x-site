@@ -25,11 +25,46 @@
             <version>${project.version}</version>
         </dependency>
 
+        <!-- Spring Boot自动配置Spring Security -->
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+        <!-- 依赖通用配置组件 -->
+        <dependency>
+            <groupId>org.fkjava</groupId>
+            <artifactId>commons-config</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.fkjava</groupId>
+            <artifactId>commons-data</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        
+        <!-- 加入Spring MVC，并且配置好 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- 解决JAXB在Java 11里面被删除的问题 -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+        </dependency>
+        <!-- 需要JPA -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!-- 数据库驱动 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
         <!-- 开发的时候使用的，用于自动部署、自动重启，修改的文件可以马上生效 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -38,19 +73,27 @@
             <!-- 可选的，必须设置为true，才能实现热部署 -->
             <optional>true</optional>
         </dependency>
-
-        <!-- Spring Boot自动配置Spring Security -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
         <!-- 加入Spring Security的单元测试框架，方便进行安全测试 -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <!-- 加入前端需要的webjars，就是一堆的css、js、字体、图片 -->
+        <dependency>
+            <groupId>org.webjars.bower</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>3.3.7</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
         <!-- 加入Servlet API的依赖 -->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -68,11 +111,9 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- 加入前端需要的webjars，就是一堆的css、js、字体、图片 -->
         <dependency>
-            <groupId>org.webjars.bower</groupId>
-            <artifactId>bootstrap</artifactId>
-            <version>3.3.7</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 </project>

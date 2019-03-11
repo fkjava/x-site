@@ -74,7 +74,7 @@ public class FormSecurityConfig extends WebSecurityConfigurerAdapter implements 
                 // 登录页面的地址和其他的静态页面都不要权限
                 // /*表示目录下的任何地址，但是不包括子目录
                 // /** 则连同子目录一起匹配
-                .antMatchers(loginPage, "/error/**", "/layout/ex", "/images/**", "/css/**", "/zTree/**", "/js/**",
+                .antMatchers(loginPage, "/error", "/error/**", "/layout/ex", "/images/**", "/css/**", "/zTree/**", "/js/**",
                         "/webjars/**", "/static/**", "/disk/register")//
                 .permitAll()// 不做访问判断
                 .antMatchers("/", "/index", "/identity/profile").authenticated()// 授权以后才能访问，但不使用自定义检查

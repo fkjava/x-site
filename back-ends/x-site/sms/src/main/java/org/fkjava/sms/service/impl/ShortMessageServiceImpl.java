@@ -45,7 +45,11 @@ public class ShortMessageServiceImpl implements ShortMessageService {
         ShortMessageVerifyCode codes = this.template.execute(new SessionCallback<ShortMessageVerifyCode>() {
             @Override
             public <K, V> ShortMessageVerifyCode execute(RedisOperations<K, V> redisOperations) throws DataAccessException {
-                return (ShortMessageVerifyCode) redisOperations.boundValueOps((K) id).get();
+                ShortMessageVerifyCode codes = (ShortMessageVerifyCode) redisOperations.boundValueOps((K) id).get();
+                if(codes == null){
+                    codes = new ShortMessageVerifyCode();
+                }
+                return codes;
             }
         });
         codes.setId(id);

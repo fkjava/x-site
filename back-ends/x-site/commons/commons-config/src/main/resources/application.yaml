@@ -21,3 +21,8 @@ spring:
     # 可以不写单位，默认是MB，建议写单位
     # KB、MB、GB、TB
     maxFileSize: 10MB
+  # 配置Redis数据库
+  redis:
+    database: 3
+    host: 10.0.0.200
+    port: 6379
