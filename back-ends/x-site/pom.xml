@@ -18,6 +18,7 @@
         <module>security-sms</module>
         <module>sms</module>
         <module>images</module>
+        <module>video</module>
     </modules>
     <packaging>pom</packaging>
 
