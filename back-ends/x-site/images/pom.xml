@@ -10,8 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>security-sms</artifactId>
-
+    <artifactId>images</artifactId>
 
     <dependencies>
 
@@ -26,23 +25,13 @@
             <artifactId>commons-data</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.fkjava</groupId>
-            <artifactId>security</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.fkjava</groupId>
-            <artifactId>sms</artifactId>
-            <version>${project.version}</version>
-        </dependency>
 
         <!-- Spring Boot自动配置Spring Security -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
-        
+
         <!-- 加入Spring MVC，并且配置好 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -90,31 +79,11 @@
             <artifactId>bootstrap</artifactId>
             <version>3.3.7</version>
         </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
-        </dependency>
-        <!-- 加入Servlet API的依赖 -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <!-- Tomcat自带的，不要打包 -->
-            <scope>provided</scope>
-        </dependency>
-        <!-- 激活完整版的Tomcat，支持JSP -->
-        <!-- 增加JSP支持 -->
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
-            <!-- 如果在Tomcat里面运行，那么是由Tomcat提供的 -->
-            <!-- 如果在mvn命令直接运行，该依赖也会加入类路径 -->
-            <scope>provided</scope>
-        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
+
 </project>

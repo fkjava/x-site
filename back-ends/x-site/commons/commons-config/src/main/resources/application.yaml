@@ -3,7 +3,7 @@ spring:
   datasource:
     # 在MySQL的8.x以后的驱动包名中多了一个cj
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/site?useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/site?useSSL=false&serverTimezone=CST&allowPublicKeyRetrieval=true
     username: root
     password: 1234
 

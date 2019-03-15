@@ -17,15 +17,9 @@
         <!-- 依赖通用配置组件 -->
         <dependency>
             <groupId>org.fkjava</groupId>
-            <artifactId>commons-config</artifactId>
+            <artifactId>security-sms</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.fkjava</groupId>
-            <artifactId>commons-data</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
 
         <!-- 加入Spring MVC，并且配置好 -->
         <dependency>

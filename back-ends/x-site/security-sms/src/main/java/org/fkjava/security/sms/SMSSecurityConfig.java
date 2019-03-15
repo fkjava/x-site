@@ -34,15 +34,15 @@ import java.io.IOException;
 @ComponentScan("org.fkjava")
 public class SMSSecurityConfig extends WebSecurityConfigurerAdapter implements WebMvcConfigurer {
 
-    @Autowired
-    @Qualifier("smsSecurityService")
-    private SecurityService securityService;
-    @Autowired
-    private ShortMessageService shortMessageService;
+    private final SecurityService securityService;
+    private final ShortMessageService shortMessageService;
     private static final String REMEMBER_KEY = "fkjava.secure.keys";
 
 
-    public SMSSecurityConfig() {
+    @Autowired
+    public SMSSecurityConfig(@Qualifier("smsSecurityService") SecurityService securityService, ShortMessageService shortMessageService) {
+        this.securityService = securityService;
+        this.shortMessageService = shortMessageService;
     }
 
     @Override
@@ -99,7 +99,8 @@ public class SMSSecurityConfig extends WebSecurityConfigurerAdapter implements W
                 .and().logout()// 配置退出登录
                 .logoutUrl(logoutPage)
                 .logoutSuccessUrl(loginPage)
-                .and().csrf()// 激活防跨站攻击功能
+//                .and().csrf()// 激活防跨站攻击功能
+//                .and().cors()//激活跨域资源共享
                 .and().rememberMe()// 记住登录状态
                 .useSecureCookie(false)//
                 .userDetailsService(securityService)//

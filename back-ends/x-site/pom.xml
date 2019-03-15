@@ -17,6 +17,7 @@
         <module>cms</module>
         <module>security-sms</module>
         <module>sms</module>
+        <module>images</module>
     </modules>
     <packaging>pom</packaging>
 
