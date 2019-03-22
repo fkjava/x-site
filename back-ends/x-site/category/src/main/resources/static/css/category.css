@@ -1,0 +1,13 @@
+.tree-container {
+    height: 400px;
+    overflow: auto;
+    border-right: 1px solid #ddd;
+}
+
+.ztree li span.button.add {
+    margin-left: 2px;
+    margin-right: -1px;
+    background-position: -144px 0px;
+    vertical-align: top;
+    *vertical-align: middle
+}

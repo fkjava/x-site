@@ -19,6 +19,7 @@
         <module>sms</module>
         <module>images</module>
         <module>video</module>
+        <module>category</module>
     </modules>
     <packaging>pom</packaging>
 

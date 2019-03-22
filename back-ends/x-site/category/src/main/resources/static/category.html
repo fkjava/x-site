@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>菜单管理</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/zTree/css/zTreeStyle/zTreeStyle.css"/>
+    <link rel="stylesheet" href="/css/category.css"/>
+
+    <script type="text/javascript" src="/webjars/jquery/3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/3.3.7/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/zTree/js/jquery.ztree.all.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+            菜单管理
+        </div>
+        <div class="panel-body">
+            <div class="col-xs-12 col-sm-4 tree-container">
+                <ul id="treeDemo" class="ztree"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var moveURL = "/category/move";
+    var loadURL = "/category";
+    var removeURL = "/category";
+</script>
+<script type="text/javascript" src="/js/category.js"></script>
+
+
+</body>
+</html>
