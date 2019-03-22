@@ -26,6 +26,8 @@ hs_err_pid*
 back-ends/x-site/category/target/
 back-ends/x-site/cms/target/
 back-ends/x-site/commons/target/
+back-ends/x-site/commons/commons-config/target/
+back-ends/x-site/commons/commons-data/target/
 back-ends/x-site/identity/target/
 back-ends/x-site/images/target/
 back-ends/x-site/mvnw/target/
