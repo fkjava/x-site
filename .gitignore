@@ -30,13 +30,12 @@ back-ends/x-site/commons/commons-config/target/
 back-ends/x-site/commons/commons-data/target/
 back-ends/x-site/identity/target/
 back-ends/x-site/images/target/
-back-ends/x-site/mvnw/target/
-back-ends/x-site/mvnw.cmd/target/
 back-ends/x-site/parent/target/
-back-ends/x-site/pom.xml/target/
 back-ends/x-site/security/target/
 back-ends/x-site/security-form/target/
 back-ends/x-site/security-oauth/target/
 back-ends/x-site/security-sms/target/
 back-ends/x-site/sms/target/
 back-ends/x-site/video/target/
+
+
