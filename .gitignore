@@ -21,3 +21,20 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+
+back-ends/x-site/category/target/
+back-ends/x-site/cms/target/
+back-ends/x-site/commons/target/
+back-ends/x-site/identity/target/
+back-ends/x-site/images/target/
+back-ends/x-site/mvnw/target/
+back-ends/x-site/mvnw.cmd/target/
+back-ends/x-site/parent/target/
+back-ends/x-site/pom.xml/target/
+back-ends/x-site/security/target/
+back-ends/x-site/security-form/target/
+back-ends/x-site/security-oauth/target/
+back-ends/x-site/security-sms/target/
+back-ends/x-site/sms/target/
+back-ends/x-site/video/target/
